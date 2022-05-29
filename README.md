@@ -71,7 +71,7 @@ Each object represent review
 
 ## services.json
 
-You can edit this file to change services you have, make sure these services have exactly the same data as **projects.services
+You can edit this file to change services you have, make sure these services have exactly the same data as **projects.services**
 
 -- ARRAY --
 
