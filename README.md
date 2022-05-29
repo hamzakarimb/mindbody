@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Editing Content data
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+All content data in this project like (PLATFRORM, REVIEW, PRODUCTS, PROJECTS, SERVICES) written in json file to make it easier to edit it.
+you can Open **src/data/.json** to start edit it
 
-## Available Scripts
+## platform.json
 
-In the project directory, you can run:
+You can edit this file to change what platform you use for your services, on home page section "Platform we build on" is the component we use this data.
 
-### `npm start`
+-- ARRAY OF OBJECTS --
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each object represent part of development (Backend, Frontend, etc)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* name (string) = Part of development 
+* item (array of objects) = Platforms you use for this part of development
 
-### `npm test`
+   * name (string) = Name of platform 
+   * image (string) = Image location 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## products.json
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can edit this file to change what products you have, on products page is the component we use this data for.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-- ARRAY OF OBJECTS --
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Each object represent product 
 
-### `npm run eject`
+* name (string) = Name of product
+* description (array) = Description of product, new item array for new paragraph
+* image (string) = Image location 
+* feature (array of objects) = Feature of your product 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   * name (string) = Name of feature 
+   * img (string) = Image location 
+   * desc (string) = feature description
+   
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## projects.json
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can edit this file to change what projects you have done, on portfolio page is the component we use this data for.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-- ARRAY OF OBJECTS --
 
-## Learn More
+Each object represent product 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* name (string) = Name of project
+* services (array) = Services used for this project
+* shortDescription (string) = Short description for this project ex: "Jeweller's website"
+* description (string) = Description for this project
+* date (string) = Finish date of project
+* image (array) = Image Location
+* solution (array) = Explanation of solution you use for this project, new item array for new paragraph
+* build (array) = Explanation of how you build this project, new item array for new paragraph
+* banner (string) = Banner image location
+* mockup (string) = Mockup image location
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## review.json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can edit this file to change reviews from your clients, on home page review section is the component we use this data for.
 
-### Analyzing the Bundle Size
+-- ARRAY OF OBJECTS --
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Each object represent review 
 
-### Making a Progressive Web App
+* name (string) = Name of client
+* review (array) = Review
+* star (integer) = How many star did your client gave
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## services.json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can edit this file to change services you have, make sure these services have exactly the same data as **projects.services
 
-### Deployment
+-- ARRAY --
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Each array represent service 
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Images location and settings
+
+All of image used for this website is located in **public/images**
+You can place images anywhere inside that folder or make new folder category, then you can use it for you content
+
+
+### Image location name in data .json
+
+The default location for images is **images**, so if you put your image (ex: logo.png) there you can put location like **images/logo.png**
+
+Then if you make another folder (ex: projects) inside images folder and put your images there (logo.png) you can put location like **images/projects/logo.png**.
+
+
