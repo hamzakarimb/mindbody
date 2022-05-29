@@ -1,6 +1,6 @@
 # Editing Content data
 
-All content data in this project like (PLATFRORM, REVIEW, PRODUCTS, PROJECTS, SERVICES) written in json file to make it easier to edit it.
+All content data in this project like (PLATFRORMS, REVIEWS, PRODUCTS, PROJECTS, SERVICES) written in json file to make it easier to edit it.
 you can Open **src/data/.json** to start edit it
 
 ## platform.json
